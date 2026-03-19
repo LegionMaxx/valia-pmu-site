@@ -498,8 +498,8 @@
       will-change: transform;
     }
 
-    .review {
-      min-width: calc((100% - 32px) / 3);
+   .review {
+  min-width: calc((100% - 16px) / 2);
       min-height: 100%;
       flex: 0 0 auto;
       background: rgba(255,255,255,0.78);
@@ -1321,11 +1321,10 @@
 
     let reviewIndex = 0;
 
-    function getReviewsPerView() {
-      if (window.innerWidth <= 820) return 1;
-      if (window.innerWidth <= 1200) return 2;
-      return 3;
-    }
+   function getReviewsPerView() {
+  if (window.innerWidth <= 820) return 1;
+  return 2;
+}
 
     function updateReviewsSlider() {
       if (!reviewsTrack) return;
