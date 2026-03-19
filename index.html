@@ -717,11 +717,11 @@
             </div>
             <div class="stats">
               <div class="stat">
-                <strong>5+</strong>
+                <strong>2+</strong>
                 <span data-i18n="stat1">років досвіду</span>
               </div>
               <div class="stat">
-                <strong>700+</strong>
+                <strong>300+</strong>
                 <span data-i18n="stat2">процедур</span>
               </div>
             </div>
@@ -830,6 +830,7 @@
               <button class="chip active" data-filter="all" data-i18n="filterAll">Усі</button>
               <button class="chip" data-filter="brows">Brows</button>
               <button class="chip" data-filter="lips">Lips</button>
+			  <button class="chip" data-filter="lips">Lami</button>
             </div>
           </div>
 
@@ -1061,7 +1062,7 @@
                 <div class="contact-body">
                   <h3>WhatsApp</h3>
                   <p data-i18n="contact2Text">Номер для швидкого запису і консультації.</p>
-                 <a class="btn-outline" href="https://wa.me/447378550203" data-i18n="bookingBtn2">Написати в WhatsApp</a>
+                 <a class="btn-outline" href="https://wa.me/447378550203" data-i18n="bookingBtn2">WhatsApp</a>
                 </div>
               </article>
             </div>
@@ -1081,12 +1082,12 @@
               </div>
             </div>
 
-            <form onsubmit="event.preventDefault(); alert(currentLang === 'uk' ? 'Форма демонстраційна. Підключи її до свого сервісу запису.' : 'This form is a demo. Connect it to your booking service.');">
-              <input type="text" data-placeholder-uk="Ім’я" data-placeholder-en="Name" placeholder="Ім’я">
-              <input type="text" data-placeholder-uk="Телефон або Instagram" data-placeholder-en="Phone or Instagram" placeholder="Телефон або Instagram">
-              <textarea data-placeholder-uk="Напишіть, яка процедура вас цікавить" data-placeholder-en="Tell us which procedure you are interested in" placeholder="Напишіть, яка процедура вас цікавить"></textarea>
-              <button class="btn" href="https://wa.me/447378550203" target="_blank"</button>
-            </form>
+            <form id="bookingForm">
+            <input id="name" type="text" data-placeholder-uk="Ім’я" data-placeholder-en="Name" placeholder="Ім’я">
+            <input id="contact" type="text" data-placeholder-uk="Телефон або Instagram" data-placeholder-en="Phone or Instagram" placeholder="Телефон або Instagram">
+            <textarea id="message" data-placeholder-uk="Напишіть, яка процедура вас цікавить" data-placeholder-en="Tell us which procedure you are interested in" placeholder="Напишіть, яка процедура вас цікавить"></textarea>
+  <button class="btn" type="submit">Надіслати запит</button>
+</form>
           </div>
 
           <div class="booking-visual">
@@ -1364,6 +1365,24 @@
     }
     setLanguage(localStorage.getItem('valia_lang') || 'uk');
   </script>
+   <script>
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
 
+  const name = document.getElementById('name').value;
+  const contact = document.getElementById('contact').value;
+  const message = document.getElementById('message').value;
+
+  const text = `New booking request:
+Name: ${name}
+Contact: ${contact}
+Procedure: ${message}`;
+
+  const phone = "447378550203";
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+  window.open(url, '_blank');
+});
+</script>
 
 </body></html>
