@@ -479,8 +479,52 @@
     .faq-answer { display: none; max-width: 760px; }
     .faq-item.open .faq-answer { display: block; }
 
-    .reviews-grid .review {
+    .reviews-section {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .reviews-viewport {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .reviews-track {
+      display: flex;
+      gap: 16px;
+      transition: transform 0.4s ease;
+      will-change: transform;
+    }
+
+    .review {
+      min-width: calc((100% - 32px) / 3);
       min-height: 100%;
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .reviews-btn {
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      border: 1.5px solid var(--line-strong);
+      background: transparent;
+      cursor: pointer;
+      font-size: 24px;
+      transition: .25s ease;
+      flex: 0 0 auto;
+    }
+
+    .reviews-btn:hover {
+      background: #111;
+      color: #fff;
     }
 
     .stars {
@@ -877,105 +921,127 @@
             <div class="mini" data-i18n="reviewsMini">Reviews</div>
             <div class="script" data-i18n="reviewsScript">Client experience</div>
             <h2 class="title" data-i18n="reviewsTitle">Відгуки</h2>
-            <div class="reviews-grid">
-              <article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review1Name">Анна</h3>
-                  <p data-i18n="review1Text">Дуже акуратна робота і спокійна атмосфера. Форма підібрана так, що брови виглядають природно щодня.</p>
+
+            <div class="reviews-section">
+              <button class="reviews-btn prev" type="button">‹</button>
+
+              <div class="reviews-viewport">
+                <div class="reviews-track" id="reviewsTrack">
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review1Name">Анна</h3>
+                      <p data-i18n="review1Text">Дуже акуратна робота і спокійна атмосфера. Форма підібрана так, що брови виглядають природно щодня.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review2Name">Sofiia</h3>
+                      <p data-i18n="review2Text">Сподобалась консультація перед процедурою. Все пояснили чітко, без поспіху, результат дуже делікатний.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review3Name">Maria</h3>
+                      <p data-i18n="review3Text">Після загоєння ефект саме такий, як хотіла: свіжо, охайно і без зайвої яскравості.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review4Name">Mia</h3>
+                      <p data-i18n="review4Text">Valia did an amazing job. Everything looks soft, balanced and very elegant.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review5Name">Марина</h3>
+                      <p data-i18n="review5Text">Робила ламінування вій — ефект просто супер. Погляд став відкритішим, і тепер не потрібно користуватись тушшю щодня.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review6Name">Ірина</h3>
+                      <p data-i18n="review6Text">Губи виглядають дуже ніжно і природно. Колір підібрали ідеально під мій тон шкіри.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review7Name">Софія</h3>
+                      <p data-i18n="review7Text">Дуже приємна атмосфера і уважний підхід. Брови виглядають максимально природно.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review8Name">Sophia</h3>
+                      <p data-i18n="review8Text">Lip blush turned out beautiful and very soft. Exactly the natural look I wanted.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review9Name">Lily</h3>
+                      <p data-i18n="review9Text">The whole experience was very comfortable. You can tell she really cares about the result.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review10Name">Тетяна</h3>
+                      <p data-i18n="review10Text">Робила губи і трохи хвилювалась за колір, але все підібрали ідеально. Після загоєння відтінок став ще м’якшим і дуже гарно виглядає без макіяжу.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review11Name">Emma</h3>
+                      <p data-i18n="review11Text">Absolutely love my brows. They look so natural and perfectly shaped.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review12Name">Chloe</h3>
+                      <p data-i18n="review12Text">My brows healed beautifully. The colour and shape look very balanced and not overdone. I really appreciate the attention to detail.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review13Name">Наталія</h3>
+                      <p data-i18n="review13Text">Робила і брови і губи. Дуже задоволена обома процедурами. Все виглядає гармонійно, обличчя стало більш виразним, але при цьому все максимально натурально.</p>
+                    </div>
+                  </article>
+
+                  <article class="review">
+                    <div class="review-body">
+                      <div class="stars">★★★★★</div>
+                      <h3 data-i18n="review14Name">Олена</h3>
+                      <p data-i18n="review14Text">Дуже довго наважувалась на перманент брів, але результат перевершив усі очікування. Форма виглядає максимально натурально, нічого зайвого. Після загоєння брови стали ще кращими. Тепер не витрачаю час на щоденний макіяж.</p>
+                    </div>
+                  </article>
                 </div>
-              </article>
-              <article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review2Name">Sofiia</h3>
-                  <p data-i18n="review2Text">Сподобалась консультація перед процедурою. Все пояснили чітко, без поспіху, результат дуже делікатний.</p>
-                </div>
-              </article>
-              <article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review3Name">Maria</h3>
-                  <p data-i18n="review3Text">Після загоєння ефект саме такий, як хотіла: свіжо, охайно і без зайвої яскравості.</p>
-                </div>
-              </article>
-				 <article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review4Name">Mia</h3>
-                  <p data-i18n="review4Text">Valia did an amazing job. Everything looks soft, balanced and very elegant.</p>
-                </div>
-              </article>
-				 <article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review5Name">Марина</h3>
-                  <p data-i18n="review5Text">Робила ламінування вій — ефект просто супер. Погляд став відкритішим, і тепер не потрібно користуватись тушшю щодня.</p>
-                </div>
-              </article>
-				 <article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review6Name">Ірина</h3>
-                  <p data-i18n="review6Text">Губи виглядають дуже ніжно і природно. Колір підібрали ідеально під мій тон шкіри.</p>
-                </div>
-              </article>
-				 <article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review7Name">Софія</h3>
-                  <p data-i18n="review7Text">Дуже приємна атмосфера і уважний підхід. Брови виглядають максимально природно.</p>
-                </div>
-              </article>
-				 <article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review8Name">Sophia</h3>
-                  <p data-i18n="review8Text">Lip blush turned out beautiful and very soft. Exactly the natural look I wanted.</p>
-                </div>
-              </article>
-				 <article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review9Name">Lily</h3>
-                  <p data-i18n="review9Text">The whole experience was very comfortable. You can tell she really cares about the result.</p>
-                </div>
-              </article>
-				 <article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review10Name">Тетяна</h3>
-                  <p data-i18n="review10Text">Робила губи і трохи хвилювалась за колір, але все підібрали ідеально. Після загоєння відтінок став ще м’якшим і дуже гарно виглядає без макіяжу.</p>
-                </div>
-              </article>
-				<article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review11Name">Emma</h3>
-                  <p data-i18n="review11Text">Absolutely love my brows. They look so natural and perfectly shaped.</p>
-                </div>
-              </article>
-				<article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review12Name">Chloe</h3>
-                  <p data-i18n="review12Text">My brows healed beautifully. The colour and shape look very balanced and not overdone. I really appreciate the attention to detail.</p>
-                </div>
-              </article>
-				<article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review13Name">Наталія</h3>
-                  <p data-i18n="review13Text">Робила і брови і губи. Дуже задоволена обома процедурами. Все виглядає гармонійно, обличчя стало більш виразним, але при цьому все максимально натурально.</p>
-                </div>
-              </article>
-				<article class="review">
-                <div class="review-body">
-                  <div class="stars">★★★★★</div>
-                  <h3 data-i18n="review14Name">Олена</h3>
-                  <p data-i18n="review14Text">Дуже довго наважувалась на перманент брів, але результат перевершив усі очікування. Форма виглядає максимально натурально, нічого зайвого. Після загоєння брови стали ще кращими. Тепер не витрачаю час на щоденний макіяж.</p>
-                </div>
-              </article>
+              </div>
+
+              <button class="reviews-btn next" type="button">›</button>
             </div>
           </article>
 
@@ -1019,7 +1085,7 @@
               <input type="text" data-placeholder-uk="Ім’я" data-placeholder-en="Name" placeholder="Ім’я">
               <input type="text" data-placeholder-uk="Телефон або Instagram" data-placeholder-en="Phone or Instagram" placeholder="Телефон або Instagram">
               <textarea data-placeholder-uk="Напишіть, яка процедура вас цікавить" data-placeholder-en="Tell us which procedure you are interested in" placeholder="Напишіть, яка процедура вас цікавить"></textarea>
-              <button class="btn" type="submit" data-i18n="formBtn">Надіслати запит</button>
+              <button class="btn" href="https://wa.me/447378550203" target="_blank"</button>
             </form>
           </div>
 
@@ -1249,6 +1315,54 @@
       });
     });
 
+	      const reviewsTrack = document.getElementById('reviewsTrack');
+    const reviewsPrev = document.querySelector('.reviews-btn.prev');
+    const reviewsNext = document.querySelector('.reviews-btn.next');
+
+    let reviewIndex = 0;
+
+    function getReviewsPerView() {
+      if (window.innerWidth <= 820) return 1;
+      if (window.innerWidth <= 1200) return 2;
+      return 3;
+    }
+
+    function updateReviewsSlider() {
+      if (!reviewsTrack) return;
+
+      const cards = reviewsTrack.querySelectorAll('.review');
+      if (!cards.length) return;
+
+      const cardsPerView = getReviewsPerView();
+      const maxIndex = Math.max(0, cards.length - cardsPerView);
+
+      if (reviewIndex > maxIndex) reviewIndex = maxIndex;
+
+      const cardGap = 16;
+      const cardWidth = cards[0].offsetWidth + cardGap;
+      reviewsTrack.style.transform = `translateX(-${reviewIndex * cardWidth}px)`;
+    }
+
+    if (reviewsPrev && reviewsNext && reviewsTrack) {
+      reviewsNext.addEventListener('click', () => {
+        const cards = reviewsTrack.querySelectorAll('.review');
+        const maxIndex = Math.max(0, cards.length - getReviewsPerView());
+        if (reviewIndex < maxIndex) {
+          reviewIndex++;
+          updateReviewsSlider();
+        }
+      });
+
+      reviewsPrev.addEventListener('click', () => {
+        if (reviewIndex > 0) {
+          reviewIndex--;
+          updateReviewsSlider();
+        }
+      });
+
+      window.addEventListener('resize', updateReviewsSlider);
+      window.addEventListener('load', updateReviewsSlider);
+    }
     setLanguage(localStorage.getItem('valia_lang') || 'uk');
   </script>
 
