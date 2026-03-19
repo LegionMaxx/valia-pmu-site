@@ -293,7 +293,7 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, 1fr);
       gap: 14px;
     }
 
@@ -370,11 +370,11 @@
       margin-top: 22px;
     }
 
-    .services-grid { grid-template-columns: repeat(4, 1fr); }
-    .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
-    .price-grid { grid-template-columns: repeat(3, 1fr); }
-    .reviews-grid { grid-template-columns: repeat(3, 1fr); }
-    .contact-grid { grid-template-columns: repeat(3, 1fr); }
+    .services-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .portfolio-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .price-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .reviews-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .contact-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
     .service,
     .work,
@@ -586,7 +586,7 @@
         border-right: none;
         border-bottom: 1px solid rgba(0,0,0,0.08);
       }
-      .menu { grid-template-columns: repeat(6, minmax(0,1fr)); }
+      .menu { grid-template-columns: repeat(auto-fit, minmax(0,1fr)); }
       .hero,
       .grid-2,
       .story-wrap,
@@ -805,7 +805,7 @@
               </div>
             </article>
             <article class="work" data-category="eyes">
-              <div class="photo" style="background-image:url('IMG_6341.HEIC')"></div>
+              <div class="photo" style="background-image:url('IMG_6341.jpg')"></div>
               <div class="work-body">
                 <h3 data-i18n="work3Title">Ламінування вій</h3>
                 <p data-i18n="work3Text">Делікатне підкреслення очей для більш виразного погляду в повсякденному житті.</p>
@@ -995,7 +995,7 @@
                 <div class="contact-body">
                   <h3>WhatsApp</h3>
                   <p data-i18n="contact2Text">Номер для швидкого запису і консультації.</p>
-                  <a class="social-link" href="#">+44 7378550203</a>
+                 <a class="btn-outline" href="https://wa.me/447378550203" data-i18n="bookingBtn2">Написати в WhatsApp</a>
                 </div>
               </article>
             </div>
@@ -1011,7 +1011,7 @@
               <p data-i18n="bookingText">Залиште свої контактні дані, і ми зв’яжемося з вами для підтвердження запису.</p>
               <div class="socials">
                 <a class="btn" target="_blank" rel="noopener" href="https://www.instagram.com/pmu_uk_valia/" data-i18n="bookingBtn1">Написати в Instagram</a>
-                <a class="btn-outline" href="#" data-i18n="bookingBtn2">Написати в WhatsApp</a>
+                <a class="btn-outline" href="https://wa.me/447378550203" data-i18n="bookingBtn2">Написати в WhatsApp</a>
               </div>
             </div>
 
