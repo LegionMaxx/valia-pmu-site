@@ -272,7 +272,6 @@
     .text,
     .service p,
     .price-card p,
-    .work p,
     .faq-answer,
     .review p,
     .contact-card p,
@@ -361,7 +360,6 @@
     }
 
     .services-grid,
-    .portfolio-grid,
     .price-grid,
     .reviews-grid,
     .contact-grid {
@@ -371,13 +369,11 @@
     }
 
     .services-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-    .portfolio-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
     .price-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-    .reviews-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .reviews-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 2fr)); }
     .contact-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
     .service,
-    .work,
     .price-card,
     .review,
     .contact-card {
@@ -401,7 +397,6 @@
     }
 
     .service-body,
-    .work-body,
     .price-body,
     .review-body,
     .contact-body {
@@ -409,7 +404,6 @@
     }
 
     .service h3,
-    .work h3,
     .price-card h3,
     .review h3,
     .contact-card h3 {
@@ -503,7 +497,7 @@
       min-height: 100%;
       flex: 0 0 auto;
       background: rgba(255,255,255,0.78);
-      border: 1px solid var(--line);
+      border: 1px solid var(--column);
       border-radius: 24px;
       overflow: hidden;
       display: flex;
@@ -514,7 +508,7 @@
       width: 46px;
       height: 46px;
       border-radius: 999px;
-      border: 1.5px solid var(--line-strong);
+      border: 1.5px solid var(--column);
       background: transparent;
       cursor: pointer;
       font-size: 24px;
@@ -783,84 +777,30 @@
           <div class="services-grid">
             <article class="service">
               <div class="service-body">
-                <div class="icon">✦</div>
+                <div class="photo" style="background-image:url('IMG_4903.JPEG')"></div>
                 <h3 data-i18n="service1Title">Powder brows</h3>
                 <p data-i18n="service1Text">М’яке заповнення форми з делікатною тінню та природним переходом кольору.</p>
               </div>
             </article>
             <article class="service">
               <div class="service-body">
-                <div class="icon">✦</div>
+                 <div class="photo" style="background-image:url('IMG_0958.JPG')"></div>
                 <h3 data-i18n="service2Title">Hairstrokes</h3>
                 <p data-i18n="service2Text">Техніка для створення ефекту натуральних волосків і легкої графіки без жорсткості.</p>
               </div>
             </article>
             <article class="service">
               <div class="service-body">
-                <div class="icon">✦</div>
+                 <div class="photo" style="background-image:url('IMG_4512.JPG')"></div>
                 <h3 data-i18n="service3Title">Lip blush</h3>
                 <p data-i18n="service3Text">Делікатне вирівнювання тону губ та м’яке підсилення природного відтінку.</p>
               </div>
             </article>
 			   <article class="service">
               <div class="service-body">
-                <div class="icon">✦</div>
-                <h3 data-i18n="service4Title">Lash lami</h3>
+                 <div class="photo" style="background-image:url('IMG_6341.jpg')"></div>
+                <h3 data-i18n="service4Title">Lash/Brow lami</h3>
                 <p data-i18n="service4Text">Делікатно підкреслює очі, додаючи погляду глибини та виразності.</p>
-              </div>
-            </article>
-			   <article class="service">
-              <div class="service-body">
-                <div class="icon">✦</div>
-                <h3 data-i18n="service5Title">Brow lami</h3>
-                <p data-i18n="service5Text">Забезпечує легку укладку брів і допомагає зберігати їхню форму протягом дня.</p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="card content-card section reveal" id="works">
-          <div class="section-top">
-            <div>
-              <div class="mini" data-i18n="worksMini">Portfolio</div>
-              <div class="script" data-i18n="worksScript">Selected works</div>
-              <h2 class="title" data-i18n="worksTitle">Роботи</h2>
-            </div>
-            <div class="chips">
-              <button class="chip active" data-filter="all" data-i18n="filterAll">Усі</button>
-              <button class="chip" data-filter="brows">Brows</button>
-              <button class="chip" data-filter="lips">Lips</button>
-			  <button class="chip" data-filter="lips">Lami</button>
-            </div>
-          </div>
-
-          <div class="portfolio-grid" id="portfolioGrid">
-            <article class="work" data-category="brows">
-              <div class="photo" style="background-image:url('IMG_4903.JPEG')"></div>
-              <div class="work-body">
-                <h3 data-i18n="work1Title">Пудрові брови</h3>
-                <p data-i18n="work1Text">Акуратна форма, м’яка насиченість та результат, який виглядає охайно і натурально.</p>
-              </div>
-            </article>
-            <article class="work" data-category="lips">
-              <div class="photo" style="background-image:url('IMG_4512.JPG')"></div>
-              <div class="work-body">
-                <h3 data-i18n="work2Title">Акварельні губи</h3>
-                <p data-i18n="work2Text">М’який тон та свіже візуальне підсилення форми без ефекту щільної помади.</p>
-              </div>
-            </article>
-            <article class="work" data-category="eyes">
-              <div class="photo" style="background-image:url('IMG_6341.jpg')"></div>
-              <div class="work-body">
-                <h3 data-i18n="work3Title">Ламінування вій</h3>
-                <p data-i18n="work3Text">Делікатне підкреслення очей для більш виразного погляду в повсякденному житті.</p>
-              </div>
-            </article>
-            <article class="work" data-category="brows">
-              <div class="photo" style="background-image:url('IMG_0958.JPG')"></div>
-              <div class="work-body">
-                <h3 data-i18n="work4Title">Волоскова техніка брів</h3>
-                <p data-i18n="work4Text">Легкий акцент на лінії очей для зібраного і доглянутого вигляду.</p>
               </div>
             </article>
           </div>
@@ -1142,16 +1082,6 @@
     service5Title: 'Ламінування брів',
     service5Text: 'Забезпечує легку укладку брів і допомагає зберігати їхню форму протягом дня.',
 
-    worksMini: 'Portfolio',
-    worksScript: 'Selected works',
-    worksTitle: 'Роботи',
-
-    work1Title: 'Пудрові брови',
-    work2Title: 'Lip blush',
-    work3Title: 'Ламінування вій',
-    work4Title: 'Волоскова техніка брів',
-    work4Text: 'Легкий акцент на лінії очей для зібраного і доглянутого вигляду.',
-
     pricesMini: 'Price list',
     pricesScript: 'Services & rates',
     pricesTitle: 'Прайс лист',
@@ -1173,7 +1103,7 @@
     bookingTitle: 'Запис',
 
     bookingText: 'Залиште свої контактні дані, і ми зв’яжемося з вами для підтвердження запису.',
-    bookingBtn2: 'Написати в WhatsApp'
+    bookingBtn2: 'WhatsApp'
   },
 
   en: {
@@ -1214,16 +1144,6 @@
     service5Title: 'Brow lamination',
     service5Text: 'Helps keep brows in shape and makes daily styling easier.',
 
-    worksMini: 'Portfolio',
-    worksScript: 'Selected works',
-    worksTitle: 'Works',
-
-    work1Title: 'Powder brows',
-    work2Title: 'Lip blush',
-    work3Title: 'Lash lamination',
-    work4Title: 'Hairstroke brows',
-    work4Text: 'A soft and refined brow technique for a natural-looking result.',
-
     pricesMini: 'Price list',
     pricesScript: 'Services & rates',
     pricesTitle: 'Prices',
@@ -1245,7 +1165,7 @@
     bookingTitle: 'Booking',
 
     bookingText: 'Leave your details and we will contact you to confirm your appointment.',
-    bookingBtn2: 'Message on WhatsApp'
+    bookingBtn2: 'WhatsApp'
   }
 };
 
