@@ -492,29 +492,36 @@
       will-change: transform;
     }
 
-   .review {
-  min-width: calc((100% - 16px) / 2);
-      min-height: 100%;
-      flex: 0 0 auto;
-      background: rgba(255,255,255,0.78);
-      border: 1px solid var(--column);
-      border-radius: 24px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
+  .review {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  flex: 0 0 100%;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
-    .reviews-btn {
-      width: 46px;
-      height: 46px;
-      border-radius: 999px;
-      border: 1.5px solid var(--column);
-      background: transparent;
-      cursor: pointer;
-      font-size: 24px;
-      transition: .25s ease;
-      flex: 0 0 auto;
-    }
+    .review {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  flex: 0 0 100%;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-body {
+  padding: 20px;
+  width: 100%;
+}
 
     .reviews-btn:hover {
       background: #111;
@@ -1235,9 +1242,8 @@
 
     let reviewIndex = 0;
 
-   function getReviewsPerView() {
-  if (window.innerWidth <= 820) return 1;
-  return 2;
+ function getReviewsPerView() {
+  return 1;
 }
 
     function updateReviewsSlider() {
